@@ -1,0 +1,42 @@
+archive/multiplication-and-color-grid/
+          table {
+            border-collapse: collapse;
+            margin: 10px 0;
+        }
+        td {
+            width: 40px;
+            height: 40px;
+            text-align: center;
+        }
+        /* 只给颜色交替图加边框 */
+        .color-grid, .color-grid td {
+            border: 1px solid #333;
+        }
+        .color-grid td {
+            width: 50px;
+            height: 50px;
+        }
+
+<h2>九九乘法表</h2>
+<%= math99.generateHtml(9) %>
+
+<h2>8×8 颜色交替图</h2>
+<table class="color-grid">
+    <%
+        for (int row = 0; row < 8; row++) {
+    %>
+    <tr>
+        <%
+            for (int col = 0; col < 8; col++) {
+                String bgColor = (row + col) % 2 == 0 ? "#FFD700" : "#8B4513";
+        %>
+        <td style="background-color: <%= bgColor %>;"></td>
+        <%
+            }
+        %>
+    </tr>
+    <%
+        }
+    %>
+</table>
+
