@@ -24,3 +24,16 @@ for b in notice:
         c=c+1
 print(c)
    """
+<算一个字母或数字在文本出现的次数>
+"""
+import sys
+
+s=sys.stdin.readline().strip()
+c=sys.stdin.readline().strip()
+if c.isalpha():
+    s=s.lower()
+    c=c.lower()
+    print(s.count(c))
+else:
+    print(s.count(c))
+"""
