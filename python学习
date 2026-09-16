@@ -7,8 +7,16 @@ for line in sys.stdin:
     if words:
         print(len(words[-1]))
     break  
+对于无交互控制台的第二方案
+while True:
+    line = input()
+    if line == "":
+        break
+    words = line.split()
+    if words:
+        print(len(words[-1]))
 """
-<打印9*9乘法表?
+<打印9*9乘法表>
 """
 for a in range(1,10):
     for b in range(1,a+1):
